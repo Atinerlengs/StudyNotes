@@ -1,21 +1,21 @@
-#### 黑名单
-###### 黑名单介绍
+## 黑名单
+#### 黑名单介绍
 黑名单顾名思义就是当我们把一个联系人或者一个号码拉入到黑名单之后,我们不再接受到该联系人
 的电话以及短信了.在如今骚扰电话短信横行的时代,黑名单功能还是很有必要的.
-###### 黑名单工作原理
+#### 黑名单工作原理
 黑名单的操作是通过com.android.providers.BlockNumberProvider管理,这个应用是
 系统自带的,主要是用来管理黑名单数据库. 在来电的时候,都会先对电话短信进行isBlocked()
 判断,此方法是在frameworks/opt/telephony/src/java/com/android/internal/telephony/BlockChecker.java
 里面.如果isBlocked为false,则对应的电话短信会被拦截.
-###### 如果添加至黑名单
+#### 如果添加至黑名单
     1. 通过手动输入号码
     2. 进入联系人里面选择添加
 以上种方法有一个区别就是通过联系人里面添加的时候,会把联系人名称也添加进去
-###### 黑名单数据库
+#### 黑名单数据库
      /data/user_de/0/com.android.providers.blockednumbers/databases/blocknumbers.db
      原生黑名单blocked表里面只有_id,original_number,e164_number.为了在黑名单列表里面添加黑名单
      名称,在blocked添加了original_name一列.
-###### 详细介绍
+#### 详细介绍
 下面主要是介绍一下添加至黑名单的流程
 <br>
 BlockedNumberActivity.java黑名单列表界面有一个添加电话号码选项,点击之后会弹出一个dialog,在里面我们
