@@ -1,4 +1,6 @@
 
  学习python的知乎网站:https://www.zhihu.com/question/20702054
 
+http://www.kuqin.com/docs/diveintopythonzh-cn-5.4b/html/getting_to_know_python/documenting_functions.html
+
 awesome-android-ui : https://github.com/wasabeef/awesome-android-ui
